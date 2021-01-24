@@ -2,9 +2,6 @@
     c-greeting-parts（院長ごあいさつ）
 ====================================*/
 
-/* object-fitはIEとEdge非対応の為、JSでobject-fit-imageを
-読み込んで表示させる */
-
 .c-greeting {
     &__pic {
         width: 300px;
