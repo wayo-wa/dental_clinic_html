@@ -1,0 +1,15 @@
+/*==============================
+    C-slider-parts（画像ループ）
+===============================*/
+
+.c-loopslider__item {
+    height: 700px;
+    width: 100vw;
+    background-attachment: fixed;/*これ固定なしだとスーッと切れ間なく移動*/
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include mq(sm) {
+        height: 400px;
+    }
+  }

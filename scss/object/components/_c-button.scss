@@ -1,0 +1,31 @@
+/*===================================
+    C-button　（ボタン）
+====================================*/
+
+.c-btn {
+    max-width: 300px;
+    color: #fff;
+    background: $color_point;
+    text-align: center;
+    padding: 15px 30px;
+    border-radius: 5px;
+    letter-spacing: 0.3em;
+    font-size: $font-size_l;
+    transition: .5s;
+    box-shadow: 2px 2px 4px #979696;
+
+    &::after {
+        width: 10px;
+        height: 10px;
+        border: 0;
+        transform: rotate(45deg);
+        color: #fff;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;        
+    }
+    &:hover {
+        box-shadow: 10px 10px 5px #979696;
+        transition: all .5s;
+        transform: translateY(-10px);
+    }
+}

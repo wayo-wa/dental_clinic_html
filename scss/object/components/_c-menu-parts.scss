@@ -1,0 +1,31 @@
+/*===================================
+    C-menu-parts（診察案内）
+====================================*/
+.c-menu {
+    &__title {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: $font-size_3l;
+        font-weight: bold;
+        @include mq(md){
+            font-size: $font-size_xl;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 1s;
+    }
+    &__panel--cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(172, 144, 108, 0.5);
+    }
+}

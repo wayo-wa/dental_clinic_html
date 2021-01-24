@@ -1,0 +1,6 @@
+.u-spacer-mg9l {
+    margin-bottom: $space_9l;
+    @include mq(sm) {
+        margin-bottom: $space_4l;
+    }
+}

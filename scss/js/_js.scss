@@ -1,0 +1,80 @@
+/*===================================
+    header,navの固定
+====================================*/
+.js-header {
+    &.is-header-fixed {/*スクロール時headerの固定*/
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        left: 0;
+    }
+}
+
+.js-nav-menu {
+    &.is-nav-fixed {/*スクロール時ナビの固定*/
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+    }
+}
+
+.js-header-display {/*スクロール時header非表示*/
+    &.is-header-none {
+        display: none;
+        @include mq(sm) {
+            display: block;
+        }
+    } 
+}
+    
+/*===================================
+    js-nav-sp スマホ用ナビの表示
+====================================*/
+.js-nav-sp {
+    @include mq(sm){
+        background: rgba(255, 255, 255, 0.5);
+        position: fixed;//固定
+        top: 60px;//header分下げる
+        right: -100%;
+        width: 100vw;
+        height: 100vh;
+        transition: .5s;
+        z-index: 2;
+        &.is-active { 
+            transition: .5s;
+            transform: translateX(-100%);
+        }
+    }
+}
+
+/*===================================
+    js-trigger（ハンバーガーメニュー）
+====================================*/
+.js-trigger {
+    &.is-active {
+        &:nth-of-type(1) {
+            transform: translateY(14px) rotate(-45deg);
+        }
+        &:nth-of-type(2) {
+            opacity: 0;
+        }
+        &:nth-of-type(3) {
+            transform: translateY(-14px) rotate(45deg);
+        }
+    }
+}
+
+/*===================================
+    js-effect コンテンツの効果
+====================================*/
+/*要素をふわっとさせる*/
+.js-effect-fade {
+    opacity : 0;
+    transform : translate(0, 45px);
+    transition : all 1s;
+    &.is-effect-scroll {/*コンテンツ元に戻す*/
+        opacity : 1;
+        transform : translate(0, 0);
+    }
+}

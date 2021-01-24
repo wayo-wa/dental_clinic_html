@@ -1,0 +1,36 @@
+/*===================================
+    P-feature（当院の特徴）
+====================================*/
+.p-feature {
+    &-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__panel {
+        padding: $space_xxl;
+        width: calc((100% - (15px*2))/3);
+        @include mq(sm) {
+            width: 100%;
+        }
+        &:not(:nth-of-type(3n)) {
+            margin-right: 15px;
+            @include mq(sm) {
+                margin: 0 0 $space_xxl 0;
+            }
+        }
+    }
+    &__head {
+        position: relative;
+        width: 100%;
+    }
+    &__badge {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+}
+
+

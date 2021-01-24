@@ -1,0 +1,25 @@
+/*===================================
+    P-greeting-block（院長ごあいさつ）
+====================================*/
+.p-greeting {
+    &-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 800px;
+        margin: 0 auto;
+        @include mq(md){
+            width: 100%;
+        }
+    }
+    &__pic {
+        width: 300px;
+        height: 100%;
+    }
+    &__text {
+        width: 55%;
+        @include mq(sm) {
+            width: 95%;
+        }
+    }
+}

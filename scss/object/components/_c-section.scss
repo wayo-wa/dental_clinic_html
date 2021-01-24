@@ -1,0 +1,13 @@
+/*===================================
+    c-section（セクション共通）
+====================================*/
+
+.c-section {
+    &__title {
+    text-align: center;
+    font-size: $font-size_xxl;
+    @include mq(sm) {
+        font-size: $font-size_xl;
+    }
+  }
+}

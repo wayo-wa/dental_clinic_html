@@ -1,0 +1,14 @@
+/*===================================
+    P-header-block
+====================================*/
+.p-header {
+    &__area {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__info {
+        @include mq(sm){
+            display: none;
+        }
+    }
+}

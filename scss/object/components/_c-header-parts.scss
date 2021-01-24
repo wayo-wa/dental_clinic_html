@@ -1,0 +1,20 @@
+/*===================================
+    C-header-parts
+====================================*/
+.c-header{
+    &__title {
+        font-size: $font-size_xxl;
+        color: $color_point;
+        @include mq(sm) {
+            font-size: $font-size_l;
+        }
+    }
+    &__info--tel {
+        color: $color_point;
+        font-size: $font-size_xl;
+    }
+}
+
+
+
+

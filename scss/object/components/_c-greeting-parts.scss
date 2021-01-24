@@ -1,0 +1,25 @@
+/*===================================
+    c-greeting-parts（院長ごあいさつ）
+====================================*/
+
+/* object-fitはIEとEdge非対応の為、JSでobject-fit-imageを
+読み込んで表示させる */
+
+.c-greeting {
+    &__pic {
+        width: 300px;
+        height: 300px;
+        object-fit: none;
+        object-position: 85% 20%;
+        font-family: 'object-fit: none; object-position: 85% 20%;'
+    }
+    &__text {
+        font-size: $font-size_m;
+        line-height: 2.25em;
+        margin-bottom: $space_6l;
+        @include mq(sm) {
+            line-height: 2em;
+            margin-top: $space_xl;
+        }
+    }
+}

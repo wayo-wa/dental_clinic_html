@@ -1,0 +1,32 @@
+/*===================================
+    L-header
+====================================*/
+.l-header {
+    width: 100vw;
+    background: #fff;
+    &__inner{
+        width: 1080px;
+        margin: 0 auto;
+        padding: $space_3l 4% 0;
+        @include mq(md){
+            width: 100%;
+        }
+        @include mq(sm){
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__nav {
+        background: #fff;
+        margin: 0 auto;
+        padding-top: $space_5l;
+        padding-bottom: 16px;
+        width: 100%;/*コレがないとfixedしたらflexが崩れる*/
+        
+        @include mq(sm){
+            padding: 0;
+            background: rgba(255, 255, 255, .85);
+        }
+    }
+}

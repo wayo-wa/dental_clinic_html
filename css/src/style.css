@@ -1,0 +1,1156 @@
+@charset "UTF-8";
+/*!
+ * ress.css • v3.0.1
+ * MIT License
+ * github.com/filipelinhares/ress
+ */
+/* # =================================================================
+   # Global selectors
+   # ================================================================= */
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  /* Prevent adjustments of font size after orientation changes in iOS */
+  word-break: normal;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+*,
+::before,
+::after {
+  background-repeat: no-repeat;
+  /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
+  box-sizing: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+  vertical-align: inherit;
+}
+
+* {
+  padding: 0;
+  /* Reset `padding` and `margin` of all elements */
+  margin: 0;
+}
+
+/* # =================================================================
+     # General elements
+     # ================================================================= */
+hr {
+  overflow: visible;
+  /* Show the overflow in Edge and IE */
+  height: 0;
+  /* Add the correct box sizing in Firefox */
+}
+
+details,
+main {
+  display: block;
+  /* Render the `main` element consistently in IE. */
+}
+
+summary {
+  display: list-item;
+  /* Add the correct display in all browsers */
+}
+
+small {
+  font-size: 80%;
+  /* Set font-size to 80% in `small` elements */
+}
+
+[hidden] {
+  display: none;
+  /* Add the correct display in IE */
+}
+
+abbr[title] {
+  border-bottom: none;
+  /* Remove the bottom border in Chrome 57 */
+  /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari */
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+a {
+  background-color: transparent;
+  /* Remove the gray background on active links in IE 10 */
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+  /* Remove the outline when hovering in all browsers */
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* Specify the font family of code elements */
+}
+
+pre {
+  font-size: 1em;
+  /* Correct the odd `em` font sizing in all browsers */
+}
+
+b,
+strong {
+  font-weight: bolder;
+  /* Add the correct font weight in Chrome, Edge, and Safari */
+}
+
+/* https://gist.github.com/unruthless/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* # =================================================================
+     # Forms
+     # ================================================================= */
+input {
+  border-radius: 0;
+}
+
+/* Replace pointer cursor in disabled elements */
+[disabled] {
+  cursor: default;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+  /* Correct the cursor style of increment and decrement buttons in Chrome */
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* Correct the odd appearance in Chrome and Safari */
+  outline-offset: -2px;
+  /* Correct the outline style in Safari */
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  /* Remove the inner padding in Chrome and Safari on macOS */
+}
+
+textarea {
+  overflow: auto;
+  /* Internet Explorer 11+ */
+  resize: vertical;
+  /* Specify textarea resizability */
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  /* Specify font inheritance of form elements */
+}
+
+optgroup {
+  font-weight: bold;
+  /* Restore the font weight unset by the previous rule */
+}
+
+button {
+  overflow: visible;
+  /* Address `overflow` set to `hidden` in IE 8/9/10/11 */
+}
+
+button,
+select {
+  text-transform: none;
+  /* Firefox 40+, Internet Explorer 11- */
+}
+
+/* Apply cursor pointer to button elements */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+[role="button"] {
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Remove inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* Replace focus style removed in the border reset above */
+button:-moz-focusring,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  outline: 1px dotted ButtonText;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS */
+}
+
+/* Remove the default button styling in all browsers */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border-style: none;
+}
+
+/* Style select like a standard input */
+select {
+  -moz-appearance: none;
+  /* Firefox 36+ */
+  -webkit-appearance: none;
+  /* Chrome 41+ */
+}
+
+select::-ms-expand {
+  display: none;
+  /* Internet Explorer 11+ */
+}
+
+select::-ms-value {
+  color: currentColor;
+  /* Internet Explorer 11+ */
+}
+
+legend {
+  border: 0;
+  /* Correct `color` not being inherited in IE 8/9/10/11 */
+  color: inherit;
+  /* Correct the color inheritance from `fieldset` elements in IE */
+  display: table;
+  /* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  /* Correct the text wrapping in Edge and IE */
+  white-space: normal;
+  /* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  /* Correct the text wrapping in Edge 18- and IE */
+}
+
+::-webkit-file-upload-button {
+  /* Correct the inability to style clickable types in iOS and Safari */
+  -webkit-appearance: button;
+  color: inherit;
+  font: inherit;
+  /* Change font properties to `inherit` in Chrome and Safari */
+}
+
+/* # =================================================================
+     # Specify media element style
+     # ================================================================= */
+img {
+  border-style: none;
+  /* Remove border when inside `a` element in IE 8/9/10 */
+}
+
+/* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+progress {
+  vertical-align: baseline;
+}
+
+/* # =================================================================
+     # Accessibility
+     # ================================================================= */
+/* Hide content from screens but not screenreaders */
+@media screen {
+  [hidden~="screen"] {
+    display: inherit;
+  }
+  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
+    position: absolute !important;
+    clip: rect(0 0 0 0) !important;
+  }
+}
+
+/* Specify the progress cursor of updating elements */
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+/* Specify the pointer cursor of trigger elements */
+[aria-controls] {
+  cursor: pointer;
+}
+
+/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+[aria-disabled] {
+  cursor: default;
+}
+
+/*==============================
+変数（色）
+===============================*/
+/*==============================
+変数（スペース）
+===============================*/
+/*==============================
+変数（フォントサイズ）
+===============================*/
+/*===================================
+    F-base（ベース）
+====================================*/
+html, body {
+  box-sizing: border-box;
+  color: #504e4e;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Noto Serif JP', serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+/*===================================
+    header,navの固定
+====================================*/
+.js-header.is-header-fixed {
+  /*スクロール時headerの固定*/
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+}
+
+.js-nav-menu.is-nav-fixed {
+  /*スクロール時ナビの固定*/
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+.js-header-display {
+  /*スクロール時header非表示*/
+}
+
+.js-header-display.is-header-none {
+  display: none;
+}
+
+@media screen and (max-width: 414px) {
+  .js-header-display.is-header-none {
+    display: block;
+  }
+}
+
+/*===================================
+    js-nav-sp スマホ用ナビの表示
+====================================*/
+@media screen and (max-width: 414px) {
+  .js-nav-sp {
+    background: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 100vw;
+    height: 100vh;
+    transition: .5s;
+    z-index: 2;
+  }
+  .js-nav-sp.is-active {
+    transition: .5s;
+    transform: translateX(-100%);
+  }
+}
+
+/*===================================
+    js-trigger（ハンバーガーメニュー）
+====================================*/
+.js-trigger.is-active:nth-of-type(1) {
+  transform: translateY(14px) rotate(-45deg);
+}
+
+.js-trigger.is-active:nth-of-type(2) {
+  opacity: 0;
+}
+
+.js-trigger.is-active:nth-of-type(3) {
+  transform: translateY(-14px) rotate(45deg);
+}
+
+/*===================================
+    js-effect コンテンツの効果
+====================================*/
+/*要素をふわっとさせる*/
+.js-effect-fade {
+  opacity: 0;
+  transform: translate(0, 45px);
+  transition: all 1s;
+}
+
+.js-effect-fade.is-effect-scroll {
+  /*コンテンツ元に戻す*/
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/*===================================
+    L-footer
+====================================*/
+.l-footer {
+  padding: 16px 0;
+  background: #00c4cc;
+  color: #fff;
+  text-align: center;
+}
+
+/*===================================
+    L-header
+====================================*/
+.l-header {
+  width: 100vw;
+  background: #fff;
+}
+
+.l-header__inner {
+  width: 1080px;
+  margin: 0 auto;
+  padding: 16px 4% 0;
+}
+
+@media screen and (max-width: 768px) {
+  .l-header__inner {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .l-header__inner {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.l-header__nav {
+  background: #fff;
+  margin: 0 auto;
+  padding-top: 32px;
+  padding-bottom: 16px;
+  width: 100%;
+  /*コレがないとfixedしたらflexが崩れる*/
+}
+
+@media screen and (max-width: 414px) {
+  .l-header__nav {
+    padding: 0;
+    background: rgba(255, 255, 255, 0.85);
+  }
+}
+
+/*===================================
+    L-section（セクション共通）
+====================================*/
+.l-section__inner {
+  width: 1080px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .l-section__inner {
+    width: 100%;
+  }
+}
+
+/*===================================
+    C-button　（ボタン）
+====================================*/
+.c-btn {
+  max-width: 300px;
+  color: #fff;
+  background: #00c4cc;
+  text-align: center;
+  padding: 15px 30px;
+  border-radius: 5px;
+  letter-spacing: 0.3em;
+  font-size: 18px;
+  transition: .5s;
+  box-shadow: 2px 2px 4px #979696;
+}
+
+.c-btn::after {
+  width: 10px;
+  height: 10px;
+  border: 0;
+  transform: rotate(45deg);
+  color: #fff;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.c-btn:hover {
+  box-shadow: 10px 10px 5px #979696;
+  transition: all .5s;
+  transform: translateY(-10px);
+}
+
+/*===================================
+    c-feature（当院の特徴）
+====================================*/
+.c-feature__head--img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  font-family: 'object-fit: contain; object-position: 50% 50%;';
+  transition: 1s;
+}
+
+.c-feature__badge {
+  height: 70px;
+  width: 70px;
+  color: #fff;
+  background: #00c4cc;
+  border-radius: 50%;
+  padding-top: 12px;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.3em;
+}
+
+.c-feature__badge--num {
+  display: block;
+  font-size: 24px;
+}
+
+.c-feature__title {
+  color: #00c4cc;
+  text-align: center;
+  margin: 32px 0;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .c-feature__title {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .c-feature__title {
+    margin: 16px 0;
+  }
+}
+
+.c-feature__foot {
+  line-height: 2em;
+}
+
+/*===================================
+    c-greeting-parts（院長ごあいさつ）
+====================================*/
+/* object-fitはIEとEdge非対応の為、JSでobject-fit-imageを
+読み込んで表示させる */
+.c-greeting__pic {
+  width: 300px;
+  height: 300px;
+  object-fit: none;
+  object-position: 85% 20%;
+  font-family: 'object-fit: none; object-position: 85% 20%;';
+}
+
+.c-greeting__text {
+  font-size: 16px;
+  line-height: 2.25em;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 414px) {
+  .c-greeting__text {
+    line-height: 2em;
+    margin-top: 12px;
+  }
+}
+
+/*===================================
+    C-header-parts
+====================================*/
+.c-header__title {
+  font-size: 30px;
+  color: #00c4cc;
+}
+
+@media screen and (max-width: 414px) {
+  .c-header__title {
+    font-size: 18px;
+  }
+}
+
+.c-header__info--tel {
+  color: #00c4cc;
+  font-size: 24px;
+}
+
+/*===================================
+    C-icon-btn-parts トップに戻るボタン
+====================================*/
+.c-icon__btn {
+  font-size: 49px;
+  color: #00c4cc;
+  opacity: 0.6;
+}
+
+.c-icon__link {
+  display: block;
+  width: 49px;
+  height: 49px;
+}
+
+/*===================================
+    C-info-parts（インフォメーション）
+====================================*/
+.c-info {
+  width: 45%;
+}
+
+@media screen and (max-width: 768px) {
+  .c-info {
+    width: 49%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .c-info {
+    width: 100%;
+    padding: 8px;
+  }
+}
+
+.c-info__iframe {
+  width: 100%;
+}
+
+.c-info__heading {
+  width: 32%;
+}
+
+@media screen and (max-width: 768px) {
+  .c-info__heading {
+    width: 37%;
+  }
+}
+
+.c-info__box {
+  background: #fff;
+  padding: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .c-info__box {
+    padding: 16px;
+  }
+}
+
+.c-info__table {
+  border-collapse: collapse;
+  margin-bottom: 16px;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.c-info__table thead tr {
+  border-top: 2px solid #00c4cc;
+  border-bottom: 2px solid #00c4cc;
+}
+
+.c-info__table tbody {
+  border-bottom: 2px solid #00c4cc;
+}
+
+.c-info__table tbody td {
+  color: #00c4cc;
+}
+
+.c-info__table th,
+.c-info__table td {
+  padding: 5px 10px;
+}
+
+.c-info__table--text {
+  line-height: 1.7em;
+  margin-bottom: 10px;
+}
+
+.c-info__table--phone {
+  font-size: 32px;
+  color: #00c4cc;
+  font-weight: bold;
+}
+
+/*===================================
+    C-menu-parts（診察案内）
+====================================*/
+.c-menu__title {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .c-menu__title {
+    font-size: 24px;
+  }
+}
+
+.c-menu__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 1s;
+}
+
+.c-menu__panel--cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(172, 144, 108, 0.5);
+}
+
+/*===================================
+    C-menu-trigger（ハンバーガーメニュー）
+====================================*/
+.c-menu-trigger {
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #504e4e;
+  border-radius: 4px;
+}
+
+.c-menu-trigger:nth-of-type(1) {
+  top: 0;
+}
+
+.c-menu-trigger:nth-of-type(2) {
+  top: 50%;
+}
+
+.c-menu-trigger:nth-of-type(3) {
+  bottom: 0;
+}
+
+/*===================================
+    C-nav-parts （ヘッダーナビメニュー）
+====================================*/
+.c-nav__item {
+  border-left: 1px solid #b9b7b4;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  width: 8%;
+}
+
+@media screen and (max-width: 768px) {
+  .c-nav__item {
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .c-nav__item {
+    width: 100%;
+  }
+}
+
+.c-nav__item:last-child {
+  border-right: 1px solid #b9b7b4;
+}
+
+/*===================================
+    c-section（セクション共通）
+====================================*/
+.c-section__title {
+  text-align: center;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 414px) {
+  .c-section__title {
+    font-size: 24px;
+  }
+}
+
+/*==============================
+    C-slider-parts（画像ループ）
+===============================*/
+.c-loopslider__item {
+  height: 700px;
+  width: 100vw;
+  background-attachment: fixed;
+  /*これ固定なしだとスーッと切れ間なく移動*/
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 414px) {
+  .c-loopslider__item {
+    height: 400px;
+  }
+}
+
+/*===================================
+    P-button　（ボタン）
+====================================*/
+.p-btn {
+  position: relative;
+  display: block;
+}
+
+@media screen and (max-width: 414px) {
+  .p-btn {
+    margin: 0 auto;
+  }
+}
+
+.p-btn::after {
+  position: absolute;
+  content: '';
+  top: 45%;
+  right: 20px;
+}
+
+/*===================================
+    P-feature（当院の特徴）
+====================================*/
+.p-feature-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.p-feature__panel {
+  padding: 15px;
+  width: calc((100% - (15px*2))/3);
+}
+
+@media screen and (max-width: 414px) {
+  .p-feature__panel {
+    width: 100%;
+  }
+}
+
+.p-feature__panel:not(:nth-of-type(3n)) {
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 414px) {
+  .p-feature__panel:not(:nth-of-type(3n)) {
+    margin: 0 0 15px 0;
+  }
+}
+
+.p-feature__head {
+  position: relative;
+  width: 100%;
+}
+
+.p-feature__badge {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*===================================
+    P-greeting-block（院長ごあいさつ）
+====================================*/
+.p-greeting-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 800px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .p-greeting-box {
+    width: 100%;
+  }
+}
+
+.p-greeting__pic {
+  width: 300px;
+  height: 100%;
+}
+
+.p-greeting__text {
+  width: 55%;
+}
+
+@media screen and (max-width: 414px) {
+  .p-greeting__text {
+    width: 95%;
+  }
+}
+
+/*===================================
+    P-header-block
+====================================*/
+.p-header__area {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 414px) {
+  .p-header__info {
+    display: none;
+  }
+}
+
+/*===================================
+    P-icon-btn-block トップに戻るボタン
+====================================*/
+.p-icon__btn {
+  position: fixed;
+  right: 16px;
+  bottom: 20%;
+}
+
+@media screen and (max-width: 414px) {
+  .p-icon__btn {
+    bottom: 10%;
+  }
+}
+
+/*===================================
+    P-info-block（インフォメーション）
+====================================*/
+.p-info-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 414px) {
+  .p-info-box {
+    flex-direction: column-reverse;
+  }
+}
+
+.p-info__map {
+  width: 40%;
+}
+
+@media screen and (max-width: 768px) {
+  .p-info__map {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .p-info__map {
+    width: 100%;
+    padding: 8px;
+  }
+}
+
+/*===================================
+    P-menu-block（診察案内）
+====================================*/
+.p-menu-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.p-menu__panel {
+  border: 1px solid #fff;
+  width: calc(100% / 2);
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 414px) {
+  .p-menu__panel {
+    width: 100%;
+  }
+}
+
+.p-menu__wrap {
+  position: relative;
+  display: block;
+  height: 250px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .p-menu__wrap {
+    height: 200px;
+  }
+}
+
+.p-menu__wrap:hover .p-menu__img {
+  transform: scale(1.2);
+  transition: 1s;
+}
+
+/*===================================
+    P-menu-trigger（ハンバーガーメニュー）
+====================================*/
+.p-menu-trigger {
+  display: none;
+}
+
+@media screen and (max-width: 414px) {
+  .p-menu-trigger {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 30px;
+    z-index: 3;
+    transition: all .4s;
+  }
+}
+
+/*===================================
+    P-nav-block （ヘッダーナビメニュー）
+====================================*/
+.p-nav__block {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 414px) {
+  .p-nav__block {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60vh;
+  }
+}
+
+.p-nav__link {
+  display: block;
+  position: relative;
+}
+
+/*<a>をdisplay:blockしても下線は<span>幅にする
+　left:50%とtransformで実現させる*/
+.p-nav__link--text::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  /*これがキモ*/
+  transform: translate(-50%, -50%);
+  /*これがキモ*/
+  bottom: -10px;
+  width: 0%;
+  height: 2px;
+  background: #00c4cc;
+  transition: all .4s;
+}
+
+.p-nav__link:hover .p-nav__link--text::after {
+  margin: 0 auto;
+  width: 75%;
+}
+
+@media screen and (max-width: 414px) {
+  .p-nav__link:hover .p-nav__link--text::after {
+    display: none;
+  }
+}
+
+/*===================================
+    P-slider-block（画像ループ）
+====================================*/
+.p-loopslider {
+  /*窓枠*/
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 414px) {
+  .p-loopslider {
+    height: 400px;
+  }
+}
+
+.p-loopslider__container {
+  /*一定時間ごとにスライドしていく要素*/
+  display: flex;
+  /*複製したul要素を横並びに。*/
+  position: absolute;
+  /*窓枠を基準に表示する位置を設置*/
+  top: 0;
+  left: 0;
+}
+
+.p-loopslider__wrap {
+  /*ul要素。widthはjqueryで付与される。クローンで複製される。*/
+  display: flex;
+  /*li要素を横並びに。*/
+}
+
+.u-bgcolor__highlight {
+  background: #f6f5f4;
+}
+
+.u-font-family__sub {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.u-spacer-mg9l {
+  margin-bottom: 64px;
+}
+
+@media screen and (max-width: 414px) {
+  .u-spacer-mg9l {
+    margin-bottom: 30px;
+  }
+}

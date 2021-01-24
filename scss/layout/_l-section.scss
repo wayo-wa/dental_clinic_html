@@ -1,0 +1,13 @@
+/*===================================
+    L-section（セクション共通）
+====================================*/
+.l-section {
+    &__inner {
+        width: 1080px;
+        margin: 0 auto;
+        padding: $space_8l 0;
+        @include mq(md){
+            width: 100%;
+        }
+    }
+}

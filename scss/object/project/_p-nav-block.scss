@@ -1,0 +1,38 @@
+/*===================================
+    P-nav-block （ヘッダーナビメニュー）
+====================================*/
+.p-nav__block {
+    display: flex;
+    justify-content: center;
+    @include mq(sm) {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 60vh;
+    }
+}
+
+.p-nav__link {
+    display: block;
+    position: relative;
+}
+
+/*<a>をdisplay:blockしても下線は<span>幅にする
+　left:50%とtransformで実現させる*/
+.p-nav__link--text::after {
+    content: '';
+    position: absolute;
+    left: 50%;/*これがキモ*/
+    transform: translate(-50%,-50%);/*これがキモ*/
+    bottom: -10px;
+    width: 0%;
+    height: 2px;
+    background: $color_point;
+    transition: all .4s;
+}
+.p-nav__link:hover .p-nav__link--text::after {
+    margin: 0 auto;
+    width: 75%;
+    @include mq(sm) {
+        display: none;
+    }
+}

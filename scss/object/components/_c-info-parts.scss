@@ -1,0 +1,61 @@
+/*===================================
+    C-info-parts（インフォメーション）
+====================================*/
+.c-info {
+    width: 45%;
+    @include mq(md){
+        width: 49%;;
+    }
+    @include mq(sm){
+        width: 100%;;
+        padding: $space_m;
+    }
+
+    &__iframe {//地図
+        width: 100%;
+    }
+    &__heading {//表見出し
+        width: 32%;
+        @include mq(md){
+            width: 37%;;
+        }
+    }
+    &__box {
+        background: #fff;
+        padding: $space_5l;
+        @include mq(md){
+            padding: $space_3l;
+        }
+    }
+    &__table {
+        border-collapse: collapse;
+        margin-bottom: $space_3l;
+        table-layout: fixed;//tableの幅用
+        width: 100%;
+
+        & thead tr {
+            border-top: 2px solid $color_point;
+            border-bottom: 2px solid $color_point;
+        }
+        & tbody {
+            border-bottom: 2px solid $color_point;
+
+            & td {
+                color: $color_point;
+            }
+        }
+        & th,
+        & td {
+            padding: $space_s $space_l;            
+        }
+        &--text {
+            line-height: 1.7em;
+            margin-bottom: $space_l;
+        }
+        &--phone {
+            font-size: $font-size_3l;
+            color: $color_point;
+            font-weight: bold;
+        }
+    }
+}

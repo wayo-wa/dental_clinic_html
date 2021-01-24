@@ -1,0 +1,19 @@
+/*===================================
+    P-button　（ボタン）
+====================================*/
+
+.p-btn {
+    position: relative;
+    display: block;
+    @include mq(sm) {
+        margin: 0 auto;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 45%;
+        right: 20px;    
+    }
+
+}

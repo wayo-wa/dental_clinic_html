@@ -1,0 +1,23 @@
+/*===================================
+    P-info-block（インフォメーション）
+====================================*/
+.p-info {
+    &-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        @include mq(sm) {
+            flex-direction: column-reverse;
+        }
+    }
+    &__map {
+        width: 40%;
+        @include mq(md){
+            width: 45%;
+        }
+        @include mq(sm){
+            width: 100%;
+            padding: $space_m;
+        }
+    }
+}

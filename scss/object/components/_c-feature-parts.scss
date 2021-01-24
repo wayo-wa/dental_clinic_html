@@ -1,0 +1,45 @@
+/*===================================
+    c-feature（当院の特徴）
+====================================*/
+.c-feature {
+    &__head--img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        font-family: 'object-fit: contain; object-position: 50% 50%;';
+        transition: 1s;
+    }
+    &__badge {
+        height: 70px;
+        width: 70px;
+        color: #fff;
+        background: $color_point;
+        border-radius: 50%;
+        padding-top: $space_xl;
+        font-size: $font-size_s;
+        text-align: center;
+        letter-spacing: 0.3em;
+
+        &--num {
+            display: block;
+            font-size: $font-size_xl;
+        }
+    }
+    &__title {
+        color: $color_point;
+        text-align: center;
+        margin: $space_5l 0;
+        font-size: $font-size_xl;
+        @include mq(md){
+            font-size: $font-size_l;
+        }
+        @include mq(sm) {
+            margin: $space_3l 0;
+        }
+    }
+    &__foot {
+        line-height: 2em;
+    }
+}
+

@@ -1,0 +1,22 @@
+/*===================================
+    C-nav-parts （ヘッダーナビメニュー）
+====================================*/
+.c-nav {
+    &__item {
+        border-left: 1px solid #b9b7b4;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        width: 8%;
+        @include mq(md){
+            width: 15%;
+        }
+        @include mq(sm){
+            width: 100%;
+        }
+        
+        &:last-child {
+            border-right: 1px solid #b9b7b4;
+        }
+    }
+}

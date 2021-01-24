@@ -1,0 +1,22 @@
+/*===================================
+    P-slider-block（画像ループ）
+====================================*/
+
+.p-loopslider {/*窓枠*/
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+    @include mq(sm) {
+        height: 400px;
+    }
+    &__container {/*一定時間ごとにスライドしていく要素*/
+        display: flex;/*複製したul要素を横並びに。*/
+        position: absolute;/*窓枠を基準に表示する位置を設置*/
+        top: 0;
+        left: 0;
+    }
+    &__wrap {/*ul要素。widthはjqueryで付与される。クローンで複製される。*/
+        display: flex;/*li要素を横並びに。*/
+    }
+}
+

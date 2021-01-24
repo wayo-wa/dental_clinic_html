@@ -1,0 +1,13 @@
+/*===================================
+    P-icon-btn-block トップに戻るボタン
+====================================*/
+.p-icon {
+    &__btn {
+        position: fixed;
+        right: 16px;
+        bottom: 20%;
+        @include mq(sm) {
+            bottom: 10%;
+        }
+    }
+}
