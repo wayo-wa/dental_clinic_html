@@ -22,7 +22,7 @@
         margin: 0 auto;
         padding-top: $space_5l;
         padding-bottom: 16px;
-        width: 100%;/*コレがないとfixedしたらflexが崩れる*/
+        width: 100%;
         
         @include mq(sm){
             padding: 0;
