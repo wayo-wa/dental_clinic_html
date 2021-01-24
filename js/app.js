@@ -102,38 +102,6 @@ $(function(){
 });
 
 /*===================================
- 画像無限ループ
-=====================================*/
-
-// $(function(){
-//   var $slideContainer = $('.p-loopslider__container');//ul要素を梱包する外枠。スライドさせる要素。
-//   var $slideWrap = $('.p-loopslider__wrap');//ul要素
-//   var $slideItem = $('.c-loopslider__item');//li要素
-//   var slideItemWidth = $slideItem.width();//li要素の横幅
-//   var slideWrapNum = $slideWrap.length;//ul要素の数
-//   var slideItemNum = $slideItem.length; //li要素の数
-//   var slideWrapWidth = slideItemWidth * slideItemNum;//ul要素の横幅(li*横幅*数)
-//   var slideContainerAdd = slideWrapWidth * 2;
-//   var DURATION = 60000;//アニメーション時間
-
-//   console.log(slideWrapNum);
-
-//   //ul要素をクローンで複製する。
-//   $slideWrap.clone().appendTo('.p-loopslider__container');//appendToはクラス名で指定する
-//   //複製した分を含めたコンテナのwidthをcssに付与する。
-//   $slideContainer.css('width', slideContainerAdd);
-    
-//   function loopsliderPosition(){
-//     $slideContainer.css({left : 0});
-//     $slideContainer.stop().animate({left: `-${slideWrapWidth}px`}, DURATION, 'linear');
-//     setTimeout(function(){
-//       loopsliderPosition();
-//     }, DURATION);
-//   };
-//   loopsliderPosition();
-// });
-
-/*===================================
  トップページボタン
 =====================================*/
 // 読み込んだ時とスクロールした時
