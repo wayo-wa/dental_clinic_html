@@ -6,4 +6,4 @@
 ●使用言語：HTML/SCSS/JS(jQuery,Ajax)  
 ●制作日数：約18日間
 
-![screencapture-glacial-beyond-81919-herokuapp-2021-01-25-08_44_47](https://user-images.githubusercontent.com/73923419/105647830-8f557500-5eeb-11eb-8b1d-ac3adccd9529.png)
+<img src="https://user-images.githubusercontent.com/73923419/105647830-8f557500-5eeb-11eb-8b1d-ac3adccd9529.png" width="300px">
