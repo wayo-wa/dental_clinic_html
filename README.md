@@ -5,7 +5,7 @@
 ●使用言語：HTML/SCSS/JS(jQuery)  
 ●制作日数：約18日間
 
-#### 【URL】&emsp;https://glacial-beyond-81919.herokuapp.com/<br> 
+#### 【URL】&emsp;http://awtask.html.xdomain.jp/<br> 
 #### 【補足】<br>
 &emsp;&emsp;画面設計はトップページのみです。<br> 
 &emsp;&emsp;gulpを使用しSassのコンパイル、CSSの圧縮、画像の圧縮を行いました。<br> 
