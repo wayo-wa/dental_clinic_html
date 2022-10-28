@@ -1,8 +1,7 @@
 ## White歯科クリニック 
   
-●使用ＯＳ：Windows10  
-●作成目的：コーディング学習後のアウトプットとして制作。  
-●使用言語：HTML/SCSS/JS(jQuery)  
+●使用ＯＳ：Windows10   
+●使用言語：HTML/CSS(SCSS)/JS(jQuery)  
 ●制作日数：約18日間
 
 #### 【URL】&emsp;http://awtask.html.xdomain.jp/<br> 
