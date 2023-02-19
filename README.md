@@ -1,8 +1,7 @@
 ## White歯科クリニック 
   
 ●使用ＯＳ：Windows10   
-●使用言語：HTML/CSS(SCSS)/JS(jQuery)  
-●制作日数：約18日間
+●使用言語：HTML/CSS(SCSS)/JS(jQuery) 
 
 #### 【URL】&emsp;http://awtask.html.xdomain.jp/<br> 
 #### 【補足】<br>
